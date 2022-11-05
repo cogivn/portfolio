@@ -1,0 +1,26 @@
+build_and_test_web_app:
+  stage: build
+  image: cirrusci/flutter:stable
+  before_script:
+    - flutter config --enable-web
+    - flutter clean
+    - flutter pub get
+    - flutter pub run build_runner build --delete-conflicting-outputs
+    - flutter pub run intl_utils:generate 
+  script:
+    - flutter build web --release
+    - flutter analyze
+    - flutter test
+  artifacts:
+    paths:
+      - build/web
+ 
+pages:
+  stage: deploy
+  script:
+    - cp -r build/web public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
