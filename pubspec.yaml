@@ -53,20 +53,23 @@ flutter:
   fonts:
     - family: MonoLisa
       fonts:
-        - asset: assets/fonts/monoLisa/MonoLisa-Black.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-BlackItalic.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-Bold.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-BoldItalic.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-ExtraLight.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-ExtraLightItalic.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-Light.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-LightItalic.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-Medium.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-MediumItalic.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-Regular.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-RegularItalic.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-Thin.ttf
-        - asset: assets/fonts/monoLisa/MonoLisa-ThinItalic.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-Black.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-BlackItalic.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-Bold.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-BoldItalic.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-ExtraLight.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-ExtraLightItalic.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-Light.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-LightItalic.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-Medium.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-MediumItalic.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-Regular.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-RegularItalic.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-Thin.ttf
+        - asset: assets/fonts/monolisa/MonoLisa-ThinItalic.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto/Roboto-Black.ttf
 
 flutter_gen:
   output: lib/generated/

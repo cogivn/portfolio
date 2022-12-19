@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       create: (context) => HomeCubit(),
       child: BlocBuilder<HomeCubit, HomeState>(builder: (context, state) {
         return const Scaffold(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.white,
           body: HomeBody(),
         );
       }),

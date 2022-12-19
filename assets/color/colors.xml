@@ -4,5 +4,5 @@
     <color name="black">#000000</color>
     <color name="primary">#FF5722</color>
     <color name="material_primary" type="material">#151515</color>
-    <color name="background">#000000</color>
+    <color name="background">#FFFFFF</color>
 </resources>

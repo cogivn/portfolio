@@ -1,6 +1,7 @@
 import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/generated/colors.gen.dart';
 import 'package:portfolio/src/common/extensions/build_context_x.dart';
 import 'package:portfolio/src/modules/home/presentation/widgets/solid_button.dart';
 
@@ -44,7 +45,7 @@ class Right extends StatelessWidget {
     return Text(
       context.s.expert_on,
       style: context.textTheme.titleMedium?.copyWith(
-        color: Colors.red,
+        color: Colors.deepOrangeAccent,
       ),
     );
   }
@@ -52,7 +53,8 @@ class Right extends StatelessWidget {
   Widget _basedOn(BuildContext context) {
     return Text(
       context.s.based_on,
-      style: context.textTheme.titleLarge,
+      style: context.textTheme.titleLarge
+          ?.copyWith(color: ColorName.materialPrimary),
     );
   }
 
@@ -73,14 +75,17 @@ class Right extends StatelessWidget {
   }
 
   Widget _iam(BuildContext context) {
-    return Text(context.s.iam, style: context.textTheme.headlineLarge);
+    return Text(context.s.iam,
+        style: context.textTheme.headlineLarge?.copyWith(
+          color: ColorName.materialPrimary,
+        ));
   }
 
   Widget _name(BuildContext context) {
     return Text(context.s.name,
         style: context.textTheme.headlineLarge?.copyWith(
           fontWeight: FontWeight.w900,
-          color: Colors.red,
+          color: Colors.deepOrangeAccent,
         ));
   }
 
@@ -95,9 +100,11 @@ class Right extends StatelessWidget {
   }
 
   Widget _download(BuildContext context) {
-    return SolidButton(text: context.s.download_cv, onPressed: () {
-      js.context.callMethod('open', [context.s.cv_url]);
-    });
+    return SolidButton(
+        text: context.s.download_cv,
+        onPressed: () {
+          js.context.callMethod('open', [context.s.cv_url]);
+        });
   }
 
   Widget _decoration() {

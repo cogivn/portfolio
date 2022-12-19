@@ -12,7 +12,7 @@ class MakeCircle extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = ColorName.materialPrimary
+      ..color = Colors.grey.shade50
       ..strokeCap = StrokeCap.round
       ..strokeWidth = strokeWidth
       ..style = PaintingStyle.stroke; //important set stroke style

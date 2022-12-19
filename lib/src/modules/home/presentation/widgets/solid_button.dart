@@ -11,7 +11,7 @@ class SolidButton extends StatelessWidget {
     this.isEnable = true,
     this.width = double.infinity,
     this.foregroundColor = Colors.white,
-    this.backgroundColor = ColorName.materialPrimary,
+    this.backgroundColor = Colors.deepOrangeAccent,
   }) : super(key: key);
 
   final String text;
