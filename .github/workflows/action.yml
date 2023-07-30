@@ -7,7 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3 # Only works with v2
       - uses: subosito/flutter-action@v1
@@ -17,7 +18,10 @@ jobs:
           dart run build_runner build --delete-conflicting-outputs
           dart run intl_utils:generate
           
-      - uses: bluefireteam/flutter-gh-pages@v7
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
-          cname: github.com
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          cname: cogi.vn
