@@ -6,7 +6,7 @@ import 'package:riverbloc/riverbloc.dart';
 import '../../../common/utils/getit_utils.dart';
 import '../../domain/interfaces/language_interface.dart';
 
-final langProvider = BlocProvider<LangCubit, Locale>((ref) {
+final langProvider = BlocProvider.autoDispose<LangCubit, Locale>((ref) {
   return getIt<LangCubit>();
 });
 
@@ -21,11 +21,5 @@ class LangCubit extends Cubit<Locale> {
       await _repository.setLocale(val);
       emit(val);
     } catch (_) {}
-  }
-
-  @override
-  Future<void> close() {
-    print('LangCubit closed!');
-    return super.close();
   }
 }

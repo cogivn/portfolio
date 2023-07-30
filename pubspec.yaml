@@ -29,11 +29,16 @@ dependencies:
   get_it: ^7.6.0
   rxdart: ^0.27.7
   dartz: ^0.10.1
+  dartx: ^1.2.0
   shared_preferences: ^2.2.0
   flutter_secure_storage: ^8.0.0
   rx_shared_preferences: ^3.0.0
   enum_annotation: ^0.0.4
   uuid: ^3.0.7
+  lottie: ^2.5.0
+  url_launcher: ^6.1.12
+  responsive_framework: ^1.1.0
+  responsive_sizer: ^3.2.0
 
 dev_dependencies:
   flutter_test:
@@ -57,29 +62,39 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/lottie/
   fonts:
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto/Roboto-Italic.ttf
-        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
-        - asset: assets/fonts/Roboto/Roboto-MediumItalic.ttf
-        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
-        - asset: assets/fonts/Roboto/Roboto-BoldItalic.ttf
+        - asset: assets/fonts/roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/roboto/Roboto-Italic.ttf
+        - asset: assets/fonts/roboto/Roboto-Medium.ttf
+        - asset: assets/fonts/roboto/Roboto-MediumItalic.ttf
+        - asset: assets/fonts/roboto/Roboto-Bold.ttf
+        - asset: assets/fonts/roboto/Roboto-BoldItalic.ttf
+    - family: VisueltPro
+      fonts:
+        - asset: assets/fonts/visuelt/VisueltPro-Black.ttf
+        - asset: assets/fonts/visuelt/VisueltPro-Bold.ttf
+        - asset: assets/fonts/visuelt/VisueltPro-Italic.ttf
+        - asset: assets/fonts/visuelt/VisueltPro-Light.ttf
+        - asset: assets/fonts/visuelt/VisueltPro-Medium.ttf
+        - asset: assets/fonts/visuelt/VisueltPro-Regular.ttf
+        - asset: assets/fonts/visuelt/VisueltPro-Thin.ttf
 
 flutter_gen:
   output: lib/generated/
 
   integrations:
     flutter_svg: true
-    lottie: false
+    lottie: true
     flare_flutter: false
     rive: false
 
   assets:
     enabled: true
     outputs:
-      package_parameter_enabled: true
+      package_parameter_enabled: false
       style: dot-delimiter
 
   fonts:
