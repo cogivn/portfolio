@@ -19,13 +19,12 @@ jobs:
       - run: flutter --version
       - name: Preparing the source code
         run: |
+          flutter config --enable-web
           flutter pub get
           dart run build_runner build --delete-conflicting-outputs
           dart run intl_utils:generate
       - name: Start build Flutter web
-        run: |
-          flutter config --enable-web
-          flutter build web --release --web-renderer=auto
+        run: flutter build web --release --web-renderer=auto
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
