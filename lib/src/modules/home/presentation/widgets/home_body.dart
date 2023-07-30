@@ -21,6 +21,7 @@ class HomeBody extends StatelessWidget {
       layout: ResponsiveRowColumnType.ROW,
       children: [
         ResponsiveRowColumnItem(child: Left()),
+
         ResponsiveRowColumnItem(child: Right()),
       ],
     );

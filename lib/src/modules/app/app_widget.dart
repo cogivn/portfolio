@@ -1,4 +1,4 @@
-import 'package:asuka/asuka.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -24,7 +24,14 @@ class AppWidget extends ConsumerWidget {
           theme: theme,
           routerConfig: router.config(),
           locale: locale,
-          builder: Asuka.builder,
+          builder: (context, child) => ResponsiveBreakpoints.builder(
+            child: child!,
+            breakpoints: [
+              const Breakpoint(start: 801, end: 1920, name: DESKTOP),
+              const Breakpoint(start: 900, end: 900, name: 'EXPAND_SIDE_PANEL'),
+              const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
+            ],
+          ),
           supportedLocales: S.delegate.supportedLocales,
           localizationsDelegates: const [
             S.delegate,
