@@ -11,4 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2 # Only works with v2
       - uses: subosito/flutter-action@v1
+      - name: Preparing the source code
+        run: |
+          flutter pub get
+          dart run build_runner build --delete-conflicting-outputs
+          dart run intl_utils:generate
+          
       - uses: bluefireteam/flutter-gh-pages@v7
