@@ -80,7 +80,7 @@ class _Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Building for android\n& flutter.',
+      context.s.title,
       style: context.textTheme.title,
     );
   }
@@ -92,7 +92,7 @@ class _Description extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Hi! I\'m Nathan Pham. \n\nA passionate Android/Flutter Developer based in the Vietnam.\nI would like to express my interest in your company and in your job offer. \nMoreover, i know exractly how to become an expert in android/flutter platform.',
+      context.s.introduce,
       style: context.textTheme.description,
     );
   }
@@ -109,7 +109,7 @@ class _SeeMyWork extends StatelessWidget {
       runAlignment: WrapAlignment.spaceBetween,
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
-        Text('SEE MY WORKS', style: context.textTheme.seeMyWorks),
+        Text(context.s.see_my_works, style: context.textTheme.seeMyWorks),
         const Icon(Icons.arrow_forward, size: 14)
       ],
     );

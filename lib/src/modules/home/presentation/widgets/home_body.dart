@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:portfolio/src/common/extension/build_context_x.dart';
 import 'package:portfolio/src/modules/home/presentation/style/home_style.dart';

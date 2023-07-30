@@ -1,4 +1,7 @@
 {
   "@@locale": "zh_Hans",
-  "version_x": "版本 {version}"
+  "version_x": "Version {version}",
+  "see_my_works": "SEE MY WORKS",
+  "title": "Building for android\n& flutter",
+  "introduce": "Hi! I'm Duy, Pham Hoang. \n\nA passionate Android/Flutter Developer based in the Vietnam.\nI would like to express my interest in your company and in your job offer. \nI know exractly how to become an expert in android/flutter platform."
 }

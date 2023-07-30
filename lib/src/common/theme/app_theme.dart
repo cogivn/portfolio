@@ -21,6 +21,7 @@ class AppTheme {
 
   ThemeData build() {
     return ThemeData(
+      visualDensity: VisualDensity.adaptivePlatformDensity,
       primarySwatch: ColorName.materialPrimary,
       textTheme: factory.create(),
     );
