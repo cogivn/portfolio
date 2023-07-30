@@ -18,7 +18,7 @@ jobs:
           dart run intl_utils:generate
           
       - uses: bluefireteam/flutter-gh-pages@v7
-      - uses: "finnp/create-file-action@master"
-        env:
-          FILE_NAME: "dir/CNAME"
-          FILE_DATA: "cogi.vn"
+      - uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          cname: github.com
