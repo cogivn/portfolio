@@ -57,7 +57,7 @@ class _Workflow extends StatelessWidget {
       return Align(
         alignment: Alignment.centerLeft,
         child: ResponsiveScaledBox(
-          width: constraint.maxWidth * .7,
+          width: (min(constraint.maxWidth * .7, 1000)),
           child: Assets.lottie.workflow.lottie(),
         ),
       );

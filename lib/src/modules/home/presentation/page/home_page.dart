@@ -47,8 +47,8 @@ class _Background extends StatelessWidget {
       child: Align(
         alignment: Alignment.center,
         child: Container(
-          width: min(width, 900),
-          height: min(width, 900),
+          width: min(width, 1000),
+          height: min(width, 1000),
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.white,
