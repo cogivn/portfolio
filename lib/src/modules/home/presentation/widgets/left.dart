@@ -74,15 +74,23 @@ class _SeeMyWork extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      runSpacing: 15,
-      spacing: 15,
-      runAlignment: WrapAlignment.spaceBetween,
-      crossAxisAlignment: WrapCrossAlignment.center,
-      children: [
-        Text(context.s.see_my_works, style: context.textTheme.seeMyWorks),
-        const Icon(Icons.arrow_forward, size: 14)
-      ],
+    return TextButton(
+      onPressed: () {
+        DefaultTabController.maybeOf(context)?.animateTo(2);
+      },
+      child: Wrap(
+        runSpacing: 15,
+        spacing: 15,
+        runAlignment: WrapAlignment.spaceBetween,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        children: [
+          Text(
+            context.s.see_my_works,
+            style: context.textTheme.seeMyWorks,
+          ),
+          const Icon(Icons.arrow_forward, size: 14)
+        ],
+      ),
     );
   }
 }

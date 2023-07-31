@@ -5,6 +5,9 @@ import 'package:portfolio/src/common/extension/build_context_x.dart';
 import 'package:responsive_framework/responsive_row_column.dart';
 
 import '../../../../../../generated/assets.gen.dart';
+import '../../../../about/about_page.dart';
+import '../../../../contact/contact_page.dart';
+import '../../../../works/works_page.dart';
 import '../../widgets/home_body.dart';
 
 class DesktopPage extends StatelessWidget {
@@ -25,9 +28,9 @@ class DesktopPage extends StatelessWidget {
             child: TabBarView(
               children: [
                 _Body(),
-                Icon(Icons.directions_transit),
-                Icon(Icons.directions_bike),
-                Icon(Icons.directions_bike),
+                AboutPage(),
+                WorksPage(),
+                ContactPage(),
               ],
             ),
           )
