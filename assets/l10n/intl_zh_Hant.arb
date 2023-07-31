@@ -3,5 +3,9 @@
   "version_x": "Version {version}",
   "see_my_works": "SEE MY WORKS",
   "title": "Building for android\n& flutter",
+  "tab_home": "HOME",
+  "tab_about": "ABOUT",
+  "tab_works": "WORKS",
+  "tab_contacts": "CONTACTS",
   "introduce": "Hi! I'm Duy, Pham Hoang. \n\nA passionate Android/Flutter Developer based in the Vietnam.\nI would like to express my interest in your company and in your job offer. \nI know exractly how to become an expert in android/flutter platform."
 }

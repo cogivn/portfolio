@@ -7,35 +7,7 @@ class Left extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveRowColumn(
-      layout: ResponsiveRowColumnType.COLUMN,
-      columnMainAxisSize: MainAxisSize.max,
-      columnCrossAxisAlignment: CrossAxisAlignment.start,
-      columnMainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        const ResponsiveRowColumnItem(child: _Logo()),
-        ResponsiveRowColumnItem(child: Expanded(child: _Body(alignment)))
-      ],
-    );
-  }
-}
-
-class _Logo extends StatelessWidget {
-  const _Logo();
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 80,
-      child: Assets.icons.icAndroid.svg(
-        colorFilter: const ColorFilter.mode(
-          Colors.green,
-          BlendMode.srcIn,
-        ),
-        width: 60,
-        height: 60,
-      ),
-    );
+    return _Body(alignment);
   }
 }
 
