@@ -5,18 +5,15 @@ class Right extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Flexible(
-      flex: 4,
-      child: ResponsiveRowColumn(
-        layout: ResponsiveRowColumnType.COLUMN,
-        columnMainAxisSize: MainAxisSize.max,
-        columnCrossAxisAlignment: CrossAxisAlignment.end,
-        columnMainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          ResponsiveRowColumnItem(child: _Menu()),
-          ResponsiveRowColumnItem(child: Expanded(child: _Workflow()))
-        ],
-      ),
+    return const ResponsiveRowColumn(
+      layout: ResponsiveRowColumnType.COLUMN,
+      columnMainAxisSize: MainAxisSize.max,
+      columnCrossAxisAlignment: CrossAxisAlignment.end,
+      columnMainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        ResponsiveRowColumnItem(child: _Menu()),
+        ResponsiveRowColumnItem(child: Expanded(child: _Workflow()))
+      ],
     );
   }
 }
