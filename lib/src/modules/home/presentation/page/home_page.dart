@@ -3,6 +3,9 @@ import 'dart:math';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/generated/colors.gen.dart';
+import 'package:portfolio/src/common/responsive.dart';
+import 'package:portfolio/src/modules/home/presentation/page/devices/desktop_page.dart';
+import 'package:portfolio/src/modules/home/presentation/page/devices/mobile_page.dart';
 
 import '../widgets/home_body.dart';
 
@@ -16,43 +19,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: ColorName.primary,
-      body: Stack(
-        children: [
-          _Background(),
-          _Body(),
-        ],
-      ),
-    );
-  }
-}
-
-class _Body extends StatelessWidget {
-  const _Body();
-
-  @override
-  Widget build(BuildContext context) {
-    return const Positioned.fill(
-      child: HomeBody(),
-    );
-  }
-}
-
-class _Background extends StatelessWidget {
-  const _Background();
-
-  @override
-  Widget build(BuildContext context) {
-    final width = MediaQuery.sizeOf(context).height * 0.65;
-    return Positioned.fill(
-      child: Align(
-        alignment: Alignment.center,
-        child: Container(
-          width: min(width, 1000),
-          height: min(width, 1000),
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            color: Colors.white,
-          ),
+      body: Padding(
+        padding: EdgeInsets.all(30.0),
+        child: Responsive(
+          desktop: DesktopPage(),
+          mobile: MobilePage(),
+          tablet: MobilePage(),
         ),
       ),
     );

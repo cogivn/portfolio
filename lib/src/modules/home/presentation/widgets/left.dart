@@ -1,22 +1,22 @@
 part of 'home_body.dart';
 
 class Left extends StatelessWidget {
-  const Left({super.key});
+  const Left({super.key, this.alignment = Alignment.center});
+
+  final Alignment alignment;
 
   @override
   Widget build(BuildContext context) {
-    return const Flexible(
-        flex: 3,
-        child: ResponsiveRowColumn(
-          layout: ResponsiveRowColumnType.COLUMN,
-          columnMainAxisSize: MainAxisSize.max,
-          columnCrossAxisAlignment: CrossAxisAlignment.start,
-          columnMainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            ResponsiveRowColumnItem(child: _Logo()),
-            ResponsiveRowColumnItem(child: Expanded(child: _Body()))
-          ],
-        ));
+    return ResponsiveRowColumn(
+      layout: ResponsiveRowColumnType.COLUMN,
+      columnMainAxisSize: MainAxisSize.max,
+      columnCrossAxisAlignment: CrossAxisAlignment.start,
+      columnMainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        const ResponsiveRowColumnItem(child: _Logo()),
+        ResponsiveRowColumnItem(child: Expanded(child: _Body(alignment)))
+      ],
+    );
   }
 }
 
@@ -25,31 +25,30 @@ class _Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
-      child: SizedBox(
-        height: 80,
-        child: Assets.icons.icAndroid.svg(
-          colorFilter: const ColorFilter.mode(
-            Colors.green,
-            BlendMode.srcIn,
-          ),
-          width: 60,
-          height: 60,
+    return SizedBox(
+      height: 80,
+      child: Assets.icons.icAndroid.svg(
+        colorFilter: const ColorFilter.mode(
+          Colors.green,
+          BlendMode.srcIn,
         ),
+        width: 60,
+        height: 60,
       ),
     );
   }
 }
 
 class _Body extends StatelessWidget {
-  const _Body();
+  final Alignment alignment;
+
+  const _Body(this.alignment);
 
   @override
   Widget build(BuildContext context) {
-    return const Align(
-      alignment: Alignment.centerRight,
-      child: ResponsiveRowColumn(
+    return Align(
+      alignment: alignment,
+      child: const ResponsiveRowColumn(
         columnCrossAxisAlignment: CrossAxisAlignment.start,
         columnMainAxisSize: MainAxisSize.min,
         layout: ResponsiveRowColumnType.COLUMN,
