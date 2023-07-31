@@ -5,7 +5,7 @@ import 'package:portfolio/src/common/extension/build_context_x.dart';
 import 'package:responsive_framework/responsive_row_column.dart';
 
 import '../../../../../../generated/assets.gen.dart';
-import '../../../../about/about_page.dart';
+import '../../../../about/presentation/page/about_page.dart';
 import '../../../../contact/contact_page.dart';
 import '../../../../works/works_page.dart';
 import '../../widgets/home_body.dart';

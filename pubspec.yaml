@@ -39,6 +39,7 @@ dependencies:
   url_launcher: ^6.1.12
   responsive_framework: ^1.1.0
   responsive_sizer: ^3.2.0
+  animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:
