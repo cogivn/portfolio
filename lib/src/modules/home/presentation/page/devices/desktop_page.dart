@@ -60,6 +60,7 @@ class _Headline extends StatelessWidget {
                   indicatorPadding: EdgeInsets.zero,
                   labelPadding: EdgeInsets.zero,
                   unselectedLabelColor: Colors.grey,
+                  dividerColor: Colors.transparent,
                   unselectedLabelStyle: context.textTheme.bodySmall,
                   labelStyle: context.textTheme.bodySmall.copyWith(
                     fontWeight: FontWeight.bold,
