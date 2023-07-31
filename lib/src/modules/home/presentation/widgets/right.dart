@@ -5,43 +5,7 @@ class Right extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ResponsiveRowColumn(
-      layout: ResponsiveRowColumnType.COLUMN,
-      columnMainAxisSize: MainAxisSize.max,
-      columnCrossAxisAlignment: CrossAxisAlignment.end,
-      columnMainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        ResponsiveRowColumnItem(child: _Menu()),
-        ResponsiveRowColumnItem(child: Expanded(child: _Workflow()))
-      ],
-    );
-  }
-}
-
-class _Menu extends StatelessWidget {
-  const _Menu();
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 100),
-      child: SizedBox(
-        height: 80,
-        child: Align(
-          alignment: Alignment.centerRight,
-          child: Wrap(
-            runSpacing: 25,
-            spacing: 25,
-            children: [
-              Text('HOME', style: context.textTheme.menuActive),
-              Text('ABOUT', style: context.textTheme.menu),
-              Text('WORKS', style: context.textTheme.menu),
-              Text('CONTACTS', style: context.textTheme.menu),
-            ],
-          ),
-        ),
-      ),
-    );
+    return const _Workflow();
   }
 }
 
